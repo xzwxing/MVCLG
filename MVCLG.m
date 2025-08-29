@@ -3,7 +3,6 @@ function [Z,F_views] = MVCLG(X,num_views,numCluster,nSmp,lambda_1,K)
 sigma=0.1;
 eps=1e-7;
 
-
 D=cell(1,num_views);
 Z = zeros(nSmp,nSmp);
 F_views = cell(1,num_views);
@@ -72,7 +71,6 @@ for i = 1:MaxIter
     for v = 1:num_views
         alpha(v) = 1/(2*sqrt(norm(Z-F_views{v}*F_views{v}',"fro").^2+eps)); 
     end
-
    
 end
 
